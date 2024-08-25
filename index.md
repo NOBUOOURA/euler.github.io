@@ -24,6 +24,18 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
+
+
+<p><a href="mailto:foo@bar.baz">mailto:foo@bar.baz</a></p>
+<p><a href="mailto:a.b-c_d@a.b">mailto:a.b-c_d@a.b</a></p>
+<p><a href="mailto:a.b-c_d@a.b">mailto:a.b-c_d@a.b</a>.</p>
+<p><a href="mailto:a.b-c_d@a.b">mailto:a.b-c_d@a.b</a>/</p>
+<p>mailto:a.b-c_d@a.b-</p>
+<p>mailto:a.b-c_d@a.b_</p>
+<p><a href="xmpp:foo@bar.baz">xmpp:foo@bar.baz</a></p>
+<p><a href="xmpp:foo@bar.baz">xmpp:foo@bar.baz</a>.</p>
+
+
 ```
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
