@@ -36,6 +36,212 @@ Syntax highlighted code block
 <p><a href="xmpp:foo@bar.baz">xmpp:foo@bar.baz</a>.</p>
 
 
+# Defines all Languages known to GitHub.
+#
+# fs_name               - Optional field. Only necessary as a replacement for the sample directory name if the
+#                         language name is not a valid filename under the Windows filesystem (e.g., if it
+#                         contains an asterisk).
+# type                  - Either data, programming, markup, prose, or nil
+# aliases               - An Array of additional aliases (implicitly
+#                         includes name.downcase)
+# ace_mode              - A String name of the Ace Mode used for highlighting whenever
+#                         a file is edited. This must match one of the filenames in https://gh.io/acemodes.
+#                         Use "text" if a mode does not exist.
+# codemirror_mode       - A String name of the CodeMirror Mode used for highlighting whenever a file is edited.
+#                         This must match a mode from https://git.io/vi9Fx
+# codemirror_mime_type  - A String name of the file mime type used for highlighting whenever a file is edited.
+#                         This should match the `mime` associated with the mode from https://git.io/f4SoQ
+# wrap                  - Boolean wrap to enable line wrapping (default: false)
+# extensions            - An Array of associated extensions (the first one is
+#                         considered the primary extension, the others should be
+#                         listed alphabetically)
+# filenames             - An Array of filenames commonly associated with the language
+# interpreters          - An Array of associated interpreters
+# language_id           - Integer used as a language-name-independent indexed field so that we can rename
+#                         languages in Linguist without reindexing all the code on GitHub. Must not be
+#                         changed for existing languages without the explicit permission of GitHub staff.
+# color                 - CSS hex color to represent the language. Only used if type is "programming" or "markup".
+# tm_scope              - The TextMate scope that represents this programming
+#                         language. This should match one of the scopes listed in
+#                         the grammars.yml file. Use "none" if there is no grammar
+#                         for this language.
+# group                 - Name of the parent language. Languages in a group are counted
+#                         in the statistics as the parent language.
+#
+# Any additions or modifications (even trivial) should have corresponding
+# test changes in `test/test_blob.rb`.
+#
+# Please keep this list alphabetized. Capitalization comes before lowercase.
+---
+1C Enterprise:
+  type: programming
+  color: "#814CCC"
+  extensions:
+  - ".bsl"
+  - ".os"
+  tm_scope: source.bsl
+  ace_mode: text
+  language_id: 0
+2-Dimensional Array:
+  type: data
+  color: "#38761D"
+  extensions:
+  - ".2da"
+  tm_scope: source.2da
+  ace_mode: text
+  language_id: 387204628
+4D:
+  type: programming
+  color: "#004289"
+  extensions:
+  - ".4dm"
+  tm_scope: source.4dm
+  ace_mode: text
+  language_id: 577529595
+ABAP:
+  type: programming
+  color: "#E8274B"
+  extensions:
+  - ".abap"
+  tm_scope: source.abap
+  ace_mode: abap
+  language_id: 1
+ABAP CDS:
+  type: programming
+  color: "#555e25"
+  extensions:
+  - ".asddls"
+  tm_scope: source.abapcds
+  language_id: 452681853
+  ace_mode: text
+ABNF:
+  type: data
+  ace_mode: text
+  extensions:
+  - ".abnf"
+  tm_scope: source.abnf
+  language_id: 429
+AGS Script:
+  type: programming
+  color: "#B9D9FF"
+  aliases:
+  - ags
+  extensions:
+  - ".asc"
+  - ".ash"
+  tm_scope: source.c++
+  ace_mode: c_cpp
+  codemirror_mode: clike
+  codemirror_mime_type: text/x-c++src
+  language_id: 2
+AIDL:
+  type: programming
+  color: "#34EB6B"
+  tm_scope: source.aidl
+  extensions:
+  - ".aidl"
+  ace_mode: text
+  interpreters:
+  - aidl
+  language_id: 451700185
+AL:
+  type: programming
+  color: "#3AA2B5"
+  extensions:
+  - ".al"
+  tm_scope: source.al
+  ace_mode: text
+  language_id: 658971832
+AMPL:
+  type: programming
+  color: "#E6EFBB"
+  extensions:
+  - ".ampl"
+  - ".mod"
+  tm_scope: source.ampl
+  ace_mode: text
+  language_id: 3
+ANTLR:
+  type: programming
+  color: "#9DC3FF"
+  extensions:
+  - ".g4"
+  tm_scope: source.antlr
+  ace_mode: text
+  language_id: 4
+API Blueprint:
+  type: markup
+  color: "#2ACCA8"
+  ace_mode: markdown
+  extensions:
+  - ".apib"
+  tm_scope: text.html.markdown.source.gfm.apib
+  language_id: 5
+APL:
+  type: programming
+  color: "#5A8164"
+  extensions:
+  - ".apl"
+  - ".dyalog"
+  interpreters:
+  - apl
+  - aplx
+  - dyalog
+  tm_scope: source.apl
+  ace_mode: text
+  codemirror_mode: apl
+  codemirror_mime_type: text/apl
+  language_id: 6
+ASL:
+  type: programming
+  ace_mode: text
+  extensions:
+  - ".asl"
+  - ".dsl"
+  tm_scope: source.asl
+  language_id: 124996147
+ASN.1:
+  type: data
+  extensions:
+  - ".asn"
+  - ".asn1"
+  tm_scope: source.asn
+  ace_mode: text
+  codemirror_mode: asn.1
+  codemirror_mime_type: text/x-ttcn-asn
+  language_id: 7
+ASP.NET:
+  type: programming
+  tm_scope: text.html.asp
+  color: "#9400ff"
+  aliases:
+  - aspx
+  - aspx-vb
+  extensions:
+  - ".asax"
+  - ".ascx"
+  - ".ashx"
+  - ".asmx"
+  - ".aspx"
+  - ".axd"
+  ace_mode: text
+  codemirror_mode: htmlembedded
+  codemirror_mime_type: application/x-aspx
+  language_id: 564186416
+ATS:
+  type: programming
+  color: "#1ac620"
+  aliases:
+  - ats2
+  extensions:
+  - ".dats"
+  - ".hats"
+  - ".sats"
+  tm_scope: source.ats
+  ace_mode: ocaml
+  language_id: 9
+
+
 ```
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
