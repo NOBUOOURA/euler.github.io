@@ -57,7 +57,8 @@ Defines all Languages known to GitHub.
                          listed alphabetically)
  filenames             - An Array of filenames commonly associated with the language
  interpreters          - An Array of associated interpreters
- language_id           - Integer used as a language-name-independent indexed field so that we can rename                         languages in Linguist without reindexing all the code on GitHub. Must not be
+ language_id           - Integer used as a language-name-independent indexed field so that we can rename
+                         languages in Linguist without reindexing all the code on GitHub. Must not be
                          changed for existing languages without the explicit permission of GitHub staff.
  color                 - CSS hex color to represent the language. Only used if type is "programming" or "markup".
  tm_scope              - The TextMate scope that represents this programming
