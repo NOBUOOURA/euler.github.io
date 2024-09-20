@@ -36,9 +36,9 @@ Syntax highlighted code block
 <p><a href="xmpp:foo@bar.baz">xmpp:foo@bar.baz</a>.</p>
 
 
-# Defines all Languages known to GitHub.
-#
-# fs_name               - Optional field. Only necessary as a replacement for the sample directory name if the
+Defines all Languages known to GitHub.
+
+ fs_name               - Optional field. Only necessary as a replacement for the sample directory name if the
 #                         language name is not a valid filename under the Windows filesystem (e.g., if it
 #                         contains an asterisk).
 # type                  - Either data, programming, markup, prose, or nil
